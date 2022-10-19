@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gym_app/models/models.dart';
 import 'package:gym_app/screens/screens.dart';
+
 
 
 class AppRouter {
@@ -13,6 +15,8 @@ class AppRouter {
         return HomeScreen.route();
       case  HomeScreen.routeName:
       return  HomeScreen.route();
+      case  UsersScreen.routeName:
+      return  UsersScreen.route(user: settings.arguments as User);
       default:
         return _errorRoute();
     }

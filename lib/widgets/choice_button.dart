@@ -4,18 +4,18 @@ class ChoiceButton extends StatelessWidget {
   final double width;
   final double height;
   final double size;
-  final Color color;
+  final Color? color;
   final IconData icon;
   final bool hasGradient;
 
   const ChoiceButton({
     Key? key,
-    required this.width,
-    required this.height,
-    required this.size,
+     this.width = 60,
+     this.height = 60,
+     this.size = 25,
     required this.color,
     required this.icon,
-    required this.hasGradient,
+    this.hasGradient = false,
   }) : super(key: key);
 
   @override
@@ -33,7 +33,7 @@ class ChoiceButton extends StatelessWidget {
                   Theme.of(context).primaryColorLight,
                 ],
               )
-            : LinearGradient(
+            : const LinearGradient(
                 colors: [
                   Colors.white,
                   Colors.white,
